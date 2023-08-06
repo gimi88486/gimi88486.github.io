@@ -1,0 +1,95 @@
+.messagebleft-container {
+  background-image: url(Wakanda33_Wd_Notification_00003.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-color: transparent;
+  transition: all 0.5s ease;
+  transition-property: top, right, bottom, left, opacity;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  min-height: 14px;
+  
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 22px;
+  padding: 18px 24px;
+  bottom: -1000px;
+  top: -100px;
+  opacity: 0;
+  z-index: 9999;
+}
+.messagebleft-container .action {
+  background: inherit;
+  display: inline-block;
+  border: none;
+  font-size: inherit;
+  text-transform: uppercase;
+  color: #4caf50;
+  margin: 0 0 0 24px;
+  padding: 0;
+  min-width: min-content;
+  cursor: pointer;
+}
+@media (min-width: 640px) {
+  .messagebleft-container {
+    min-width: auto;
+    max-width: 227px;
+    display: inline-flex;
+    border-radius: 2px;
+    margin: 24px;
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width: 640px) {
+  .messagebleft-container {
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    background-size: cover;
+  }
+}
+.messagebleft-pos.bottom-center {
+  top: auto !important;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.messagebleft-pos.bottom-left {
+  top: auto !important;
+  bottom: 0;
+  left: 0;
+}
+.messagebleft-pos.bottom-right {
+  top: auto !important;
+  bottom: 0;
+  right: 0;
+}
+.messagebleft-pos.top-left {
+  bottom: auto !important;
+  top: 0;
+  left: 0;
+}
+.messagebleft-pos.top-center {
+  bottom: auto !important;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.messagebleft-pos.top-right {
+  bottom: auto !important;
+  top: 0;
+  right: 0;
+}
+@media (max-width: 640px) {
+  .messagebleft-pos.bottom-center,
+  .messagebleft-pos.top-center {
+    left: 0;
+    transform: none;
+  }
+}
